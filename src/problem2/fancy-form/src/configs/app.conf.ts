@@ -1,1 +1,3 @@
-export const SEOs = {}
+export const SEOs = {
+  altImg: " | Token"
+}

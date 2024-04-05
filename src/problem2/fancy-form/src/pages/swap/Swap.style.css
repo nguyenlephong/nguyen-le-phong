@@ -1,0 +1,140 @@
+.swap-page {
+    width: 100%;
+    height: 100vh;
+
+}
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.form-container {
+    background: #20354C;
+    border-radius: 8px;
+    padding: 24px 36px;
+    max-width: 566px;
+    width: 100%;
+}
+
+.form-title {
+    text-align: center;
+    color: #1FF493;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.form-field {
+    background: #1C2D3F;
+    padding: 12px;
+    margin:0 12px;
+    border-radius: 8px;
+    border: 1px solid #1FF493;
+
+}
+
+.switch-currency-btn {
+    background: #1FF493;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px ;
+    cursor: pointer;
+    border: unset;
+}
+
+.form-action {
+    padding: 24px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.field-wrap-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.lbf {
+    color: #91A3B5;
+    font-size: 24px;
+}
+
+.form-button {
+    background: #1FF493;
+    border-radius: 36px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #02172D;
+    border: 2px solid #1FF493;
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+.btn-icon-dropdown {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.d-row-gap {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    height: 100%;
+}
+
+
+.f-input {
+    font-size: 24px;
+    color: #91A3B5;
+    outline: none;
+}
+
+.f-input::-webkit-outer-spin-button,
+.f-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.f-input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.f-input.borderless {
+    border: unset;
+    background: transparent;
+}
+
+
+.t-label {
+    text-transform: uppercase;
+}
+
+
+
+.currency-dropdown-container {
+    background: #fff;
+}
+
+@media only screen and (max-width: 576px) {
+    .currency-dropdown-btn {
+        width: 100%;
+    }
+}
