@@ -9,15 +9,18 @@ import {useQuery} from "@tanstack/react-query";
 import {getListOfPrices} from "services/Prices.service";
 import {useSetState} from "ahooks";
 import uniqBy from "lodash/uniqBy"
+import {delay} from "share/utils/Function.utils";
 
 type IProps = {}
 type IState = {
   swap: boolean,
+  submitLoading: boolean,
 }
 const CurrencySwapForm = (props: IProps) => {
   const [messageApi, contextHolder] = message.useMessage();
   const [state, setState] = useSetState<IState>({
-    swap: false
+    swap: false,
+    submitLoading: false
   })
   
   const {data: listOfPrices, isLoading} = useQuery<PriceItemType[]>({
@@ -54,11 +57,14 @@ const CurrencySwapForm = (props: IProps) => {
     }
   }, [watch, listOfPrices])
   
-  const onSubmit: SubmitHandler<SwapFormDataType> = (data) => {
+  const onSubmit: SubmitHandler<SwapFormDataType> = async (data) => {
+    setState({submitLoading: true})
+    await delay(2000)
     messageApi.open({
       type: 'success',
       content: `Swap ${data.amountToSend} ${data.fromCurrency} to ${data.amountToReceive} ${data.toCurrency} successful!`,
     }).then();
+    setState({submitLoading: false})
   }
   
   const onChangeCurrency = (item: PriceItemType, field: keyof SwapFormDataType) => {
@@ -241,7 +247,8 @@ const CurrencySwapForm = (props: IProps) => {
         </Spin>
         
         <div className="form-action">
-          <button type={"submit"} className={"form-button"}>Confirm Swap</button>
+          
+          <Button loading={state.submitLoading} size={"large"} htmlType={"submit"} className={"form-button"}>Confirm Swap</Button>
         </div>
       </form>
     </>
