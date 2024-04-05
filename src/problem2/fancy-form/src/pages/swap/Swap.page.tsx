@@ -1,16 +1,15 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef} from 'react';
 import CurrencySwapForm from "../../components/CurrencySwapForm";
 import "./Swap.style.css"
 import {useSize} from "ahooks";
 
-type IProps ={}
-const SwapPage = (props: IProps) => {
+const SwapPage = () => {
   
   const refToolPageDetail = useRef(null);
   const size = useSize(refToolPageDetail);
 
   useEffect(() => {
-    if (window.VANTA) {
+    if (window.VANTA && size?.width && size?.height) {
       window.VANTA.HALO({
         el: "#swap-page-bg",
         mouseControls: true,

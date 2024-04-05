@@ -1,5 +1,1 @@
-export const routeOptions = [
-  {
-  
-  }
-]
+export const routeOptions = []

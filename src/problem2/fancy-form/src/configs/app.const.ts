@@ -1,3 +1,4 @@
-export const storageKey = {
-  swap: "__swap_form-data"
+export const APP_ROUTE = {
+  SWAP: "swap",
+  HOME: "/"
 }

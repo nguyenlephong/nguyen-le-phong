@@ -1,4 +1,7 @@
+import {delay} from "../share/utils/Function.utils";
+
 export const callApiExternal = async (url: string, method: string, body: any) => {
+  await delay(3000)
   return await fetch(url, {
     headers: {},
     method: method || "GET",

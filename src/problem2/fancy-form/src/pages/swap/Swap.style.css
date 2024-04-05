@@ -42,14 +42,15 @@
 .switch-currency-btn {
     background: #1FF493;
     border-radius: 50%;
-    width: 56px;
-    height: 56px;
+    width: 48px;
+    height: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 12px ;
+    padding: 4px ;
     cursor: pointer;
     border: unset;
+    user-select: none;
 }
 
 .form-action {
