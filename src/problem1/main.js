@@ -1,3 +1,9 @@
+/**
+ * Calculates the sum of integers up to a given number using a mathematical formula.
+ * This method is efficient for small to moderate sized inputs but may encounter precision issues for extremely large values.
+ * @param {number} n - The target number up to which the sum is calculated.
+ * @returns {number} - The sum of integers up to the given number.
+ */
 var sum_to_n_a = function (n) {
   if (n >= Number.MAX_SAFE_INTEGER) return 0;
   if (n <= Number.MIN_SAFE_INTEGER) return 0;
@@ -6,6 +12,12 @@ var sum_to_n_a = function (n) {
   return n >= 0 ? sum : -sum;
 };
 
+/**
+ * Calculates the sum of integers up to a given number using a for loop.
+ * This approach iterates through integers from 1 (or -1) to the target number and accumulates the sum.
+ * @param {number} n - The target number up to which the sum is calculated.
+ * @returns {number} - The sum of integers up to the given number.
+ */
 var sum_to_n_b = function (n) {
   if (n >= Number.MAX_SAFE_INTEGER) return 0;
   if (n <= Number.MIN_SAFE_INTEGER) return 0;
@@ -15,6 +27,12 @@ var sum_to_n_b = function (n) {
   return n >= 0 ? sum : -sum;
 }
 
+/**
+ * Calculates the sum of integers up to a given number using a for loop with optimization.
+ * This approach reduces the number of iterations by summing pairs of integers symmetrically around the midpoint.
+ * @param {number} n - The target number up to which the sum is calculated.
+ * @returns {number} - The sum of integers up to the given number.
+ */
 var sum_to_n_c = function (n) {
   if (n >= Number.MAX_SAFE_INTEGER) return 0;
   if (n <= Number.MIN_SAFE_INTEGER) return 0;
@@ -29,7 +47,11 @@ var sum_to_n_c = function (n) {
 
 
 /**
- * Be careful to Maximum call stack size exceeded
+ * Calculates the sum of integers up to a given number using recursion.
+ * This method recursively adds the current number with the sum of integers up to the previous number.
+ * Caution: This approach may encounter 'Maximum call stack size exceeded' error for large inputs.
+ * @param {number} n - The target number up to which the sum is calculated.
+ * @returns {number} - The sum of integers up to the given number.
  */
 var sum_to_n_d = function (n) {
   if (n >= Number.MAX_SAFE_INTEGER) return 0;
@@ -38,6 +60,10 @@ var sum_to_n_d = function (n) {
   return n === 1 ? 1 : n + sum_to_n_d(n - 1)
 }
 
+/**
+ * Tests all sum_to_n functions with a given number and logs the results.
+ * @param {number} n - The target number for sum_to_n functions.
+ */
 var test = function (n) {
   console.log(`sum_to_${n}_a: `, sum_to_n_a(n))
   console.log(`sum_to_${n}_b: `, sum_to_n_b(n))
