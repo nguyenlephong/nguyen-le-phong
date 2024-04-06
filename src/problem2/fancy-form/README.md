@@ -1,46 +1,30 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Code challenge
 
-## Available Scripts
+## To start and enjoy my code implement:
 
-In the project directory, you can run:
+Make sure you have Node.js installed on your machine with the latest version, and have your preferred package manager ready (`bun` is recommended for its speed). If not, replace "bun" with the package manager available on your machine.
+Follow these steps:
+1. Run `bun install`
+2. Run `bun start`
+3. Open your web browser and navigate to `https://localhost:3000`
 
-### `npm start`
+Now, you're ready to explore and enjoy my code implementation! 
+---
+Let me know if you need further assistance!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Some concerns
 
-### `npm test`
+During the development of the CurrencySwapForm, I encountered difficulties in its description. I wasn't sure about the specific formula for currency conversion, so there might be discrepancies in my calculations compared to the expectations of your team. However, please overlook this, as I understand the value of time for both parties involved. To expedite the process, I refrained from reaching out to your team. I appreciate your understanding regarding this matter.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Furthermore, I noticed that typically, to convert currencies, I need to know a standard conversion rate. It could be from LUNA to USDT, and then from USDT to BNB (this is just an example). Thus, we would need to have a pair for each field. However, I haven't seen a description for this part yet.
 
-### `npm run build`
+I have fulfilled the requirements for each section, but I acknowledge that it's not comprehensive. For instance, in the form validation section, I only implemented some basic points such as mandatory fields or ensuring values are not less than 0. I kept it very simple. If you need a more refined version, I am capable of doing so. However, I'm unsure what more is needed as there are numerous ideas I could implement for this.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Regarding the directory structure, it could indeed be much simpler, but I structured it to demonstrate that this project can be expanded and maintained without any concerns.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I have chosen to utilize some supporting libraries such as lodash and Ant Design. I just want you to know that I have used quite a few libraries, rather than solely relying on vanilla HTML, CSS, and JS.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Thank you for considering these points.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
